@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bulb_container{
+            text-align: center ;
+             margin: 100px auto;
+             border: 1px solid black;
+             height: 450px;
+             width: 500px;
+        }
+        #bulb-img{
+            display: block;
+            margin: auto;
+           height: 250px;
+        }
+        #Toggler{
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 20px;
+            background-color: bisque;
+        }
+    </style>
 </head>
 <body>
-    <div class="buld_container">
-        <h1>Bolb Toggler</h1>
-        <img src="./bulb-off.png" alt="image">
+    <div class="bulb_container">
+        <h1>Bulb Toggler</h1>
+        <img src="./bulb-off.png" alt="image" id="bulb-img">
+        <button id="Toggler">Toggler</button>
     </div>
 </body>
 </html>
