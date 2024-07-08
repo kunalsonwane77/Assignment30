@@ -30,7 +30,23 @@
     <div class="bulb_container">
         <h1>Bulb Toggler</h1>
         <img src="./bulb-off.png" alt="image" id="bulb-img">
-        <button id="Toggler">Toggler</button>
+        <button id="Toggler" onclick="Bulbtoggler()">Toggler</button>
     </div>
+
+
+    <script>
+         function Bulbtoggler(){
+            const bulbElement = document.getElementById("bulb-img")
+
+             bulbElement.src.includes("bulb-off.png") ?
+                bulbElement.src="./bulb-on.png": bulbElement.src="./bulb-off.png"
+            
+                
+         }
+
+
+
+
+    </script>
 </body>
 </html>
