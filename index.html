@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Light</title>
     <style>
         .bulb_container{
             text-align: center ;
-             margin: 100px auto;
+             margin: 50px auto;
              border: 1px solid gainsboro;
              
              box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -29,9 +29,30 @@
         #head{
            margin-top: 20px;
         }
+        #theme-icon{
+            
+            height: 100px;
+        }
+        .theme{
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            margin: 70px auto;
+        }
+        .dark{
+            background-color: #004466;
+        }
+        .bglight{
+            background-color:  #e6f7ff;
+        }
     </style>
 </head>
-<body>
+<body class="bglight" id="bgdark">
+
+    <div class="theme">
+        <img src="./Moon.png" alt="sun" id="theme-icon" onclick=" enabledark()">
+        <img src="./Sun.png" alt="sun" id="theme-icon" onclick="enablelight()">
+    </div>
     <div class="bulb_container">
         <h1 id="head">Bulb Toggler</h1>
         <img src="./bulb-off.png" alt="image" id="bulb-img">
@@ -49,8 +70,17 @@
                 
          }
 
+       function enabledark(){
+             const mainbody = document.getElementById("bgdark")
+             mainbody.classList.remove("bglight")
+             mainbody.classList.add("dark")
 
-
+       }
+        function enablelight(){
+            const mainbody = document.getElementById("bgdark")
+            mainbody.classList.remove("dark")
+            mainbody.classList.add("bglight")
+        }
 
     </script>
 </body>
